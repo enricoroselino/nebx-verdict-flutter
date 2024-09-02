@@ -18,7 +18,7 @@ Performing error handling :
 ```dart
 class SomeRepository {
     IVerdict<SomeDataModel> getDataSuccess() {
-        final result = decode(successRemoteData());
+        final result = successRemoteData();
         // you can fail fast here using guard clause
         
         // if using failedRemoteData(), then it's gonna returning ....
