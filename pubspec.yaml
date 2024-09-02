@@ -1,7 +1,8 @@
 name: nebx_verdict
-description: "A new Flutter project."
+description: "Nebx Verdict is a result pattern to simplify error handling."
 version: 0.0.1
-homepage:
+homepage: https://github.com/enricoroselino/nebx-verdict-flutter
+repository: https://github.com/enricoroselino/nebx-verdict-flutter
 
 environment:
   sdk: ^3.5.1
