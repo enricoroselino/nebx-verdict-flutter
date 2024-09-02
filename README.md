@@ -1,6 +1,8 @@
 # Nebx Verdict
 
 [![Pub](https://img.shields.io/pub/v/nebx_verdict.svg)](https://pub.dev/packages/nebx)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/enricoroselino/nebx-verdict-flutter/blob/main/LICENSE)
+
 
 Nebx Verdict is a result pattern to simplify error handling.
 

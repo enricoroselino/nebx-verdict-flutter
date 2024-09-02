@@ -32,7 +32,7 @@ class Issue extends Equatable implements IIssue {
       throw ArgumentError.value(message);
     }
 
-    if (issueLayer == IssueLayer.request && statusCode > 0) {
+    if (issueLayer == IssueLayer.request && statusCode <= 0) {
       const message = "Invalid Issue: Request Issue should have a status code";
       throw ArgumentError.value(message);
     }
