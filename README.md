@@ -1,6 +1,6 @@
 # Nebx Verdict
 
-[![Pub](https://img.shields.io/pub/v/nebx.svg)](https://pub.dev/packages/nebx)
+[![Pub](https://img.shields.io/pub/v/nebx_verdict.svg)](https://pub.dev/packages/nebx)
 
 Nebx Verdict is a result pattern to simplify error handling.
 
