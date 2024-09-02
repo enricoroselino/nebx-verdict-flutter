@@ -1,6 +1,6 @@
 # Nebx Verdict
 
-[![Pub](https://img.shields.io/pub/v/nebx_verdict.svg)](https://pub.dev/packages/nebx)
+[![Pub](https://img.shields.io/pub/v/nebx_verdict.svg)](https://pub.dev/packages/nebx_verdict)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/enricoroselino/nebx-verdict-flutter/blob/main/LICENSE)
 
 
