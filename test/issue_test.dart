@@ -1,28 +1,41 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:nebx_verdict/issue.dart';
+import 'package:nebx_verdict/nebx_verdict.dart';
 
 void main() {
-  late IIssue sut;
+  final applicationIssues = [
+    Issue.parsing(),
+    Issue.other(""),
+  ];
 
   group("Application Issue", () {
-    setUp(() {
-      sut = Issue.other("", layer: IssueLayer.app, statusCode: 0);
+    test("should have application layer", () {
+      for (var i in applicationIssues) {
+        expect(i.issueLayer, IssueLayer.app);
+      }
     });
 
     test("can't have a status code", () {
-      expect(sut.issueLayer, IssueLayer.app);
-      expect(sut.statusCode == 0,  true);
-    });
-  });
-
-  group("Request Issue", () {
-    setUp(() {
-      sut = Issue.other("", layer: IssueLayer.request, statusCode: 418);
+      for (var i in applicationIssues) {
+        expect(i.statusCode, 0);
+      }
     });
 
-    test("should have status code", () {
-      expect(sut.statusCode > 0, true);
-      expect(sut.issueLayer, IssueLayer.request);
+    test("throw exception if application issue have a status code", () {
+      expect(
+          () => Issue.other(
+                "",
+                layer: IssueLayer.app,
+                statusCode: 400,
+              ),
+          throwsArgumentError);
+    });
+
+    test("throw exception if request issue doesn't have status code", () {
+      expect(() => Issue.other("", layer: IssueLayer.request, statusCode: -60),
+          throwsArgumentError);
+
+      expect(() => Issue.other("", layer: IssueLayer.request, statusCode: 0),
+          throwsArgumentError);
     });
   });
 }
